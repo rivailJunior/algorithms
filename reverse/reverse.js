@@ -11,4 +11,4 @@ function reverse(str) {
   return reverseResult;
 }
 
-reverse("apple");
+export { reverse };
