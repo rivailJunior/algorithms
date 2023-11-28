@@ -40,4 +40,4 @@ function totalStr(str) {
   }
 }
 
-totalStr("aabbbcct");
+module.exports = { totalStr };
