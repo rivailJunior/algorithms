@@ -19,20 +19,30 @@ Examples:
  chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 */
 
-function chunk(array, size) {
-  const auxArr = [];
-  let position = 0;
-  let helperArr = [];
+// function chunk(array, size) {
+//   const auxArr = [];
+//   let position = 0;
+//   let helperArr = [];
 
-  for (let value of array) {
-    helperArr.push(value);
-    auxArr[position] = helperArr;
-    if (auxArr[position].length === size) {
-      position++;
-      helperArr = [];
-    }
+//   for (let value of array) {
+//     helperArr.push(value);
+//     auxArr[position] = helperArr;
+//     if (auxArr[position].length === size) {
+//       position++;
+//       helperArr = [];
+//     }
+//   }
+//   return auxArr;
+// }
+
+function chunk(array, size) {
+  let index = 0;
+  const auxArray = [];
+  while (index < array.length) {
+    auxArray.push(array.slice(index, index + size));
+    index += size;
   }
-  return auxArr;
+  return auxArray;
 }
 
 module.exports = { chunk };
