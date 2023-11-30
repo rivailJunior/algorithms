@@ -9,7 +9,7 @@ function capitalize(str) {
     const sliced = key.slice(1);
     newStr += key[0].toUpperCase() + sliced + " ";
   }
-  return newStr;
+  return newStr.trim();
 }
 
 capitalize("hello i'm rivail santos");
